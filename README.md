@@ -17,7 +17,7 @@ Este repositorio contiene la configuración para poder levantar una máquina que
 ##Forma de uso
 
 	$ git clone https://github.com/arpius/vagrant-lamp.git
-	$ cd Vagrant-LAMP
+	$ cd vagrant-lamp
 	$ vagrant up
 
 ####Acceso al servidor web
