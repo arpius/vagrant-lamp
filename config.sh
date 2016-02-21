@@ -34,7 +34,8 @@ sed -i 's/Deny from All/# Deny from All/g' /etc/httpd/conf.d/phpMyAdmin.conf
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
-# Abrir los puertos 80 y 443 en iptables
+# Abrir los puertos 22, 80 y 443 en iptables
+/sbin/iptables -I INPUT -p tcp --dport 22 -j ACCEPT
 /sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 /sbin/iptables -I INPUT -p tcp --dport 443 -j ACCEPT
 /etc/rc.d/init.d/iptables save
