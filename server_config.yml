@@ -1,0 +1,11 @@
+box: bento/centos-6.7-i386
+name: vagrant-lamp
+hostname: vagrant-lamp
+memory: 1024
+private_ip: 192.168.55.10
+forward_ports:
+    - { guest: 80, host: 8080 }
+scripts:
+    - { config: 'config.sh' }
+sync_folders:
+    - { guest: 'htdocs', host: '/var/www/html' }
